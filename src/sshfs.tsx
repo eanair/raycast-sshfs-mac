@@ -135,7 +135,7 @@ export default function Command() {
 
         <List.Item
           title={language === "ko" ? "마운트 포인트 목록" : "Mount point list"}
-          subtitle={`${language === "ko" ? "저장된 마운트 포인트" : "Saved mount points"}: ${mountPoints.length}개`}
+          subtitle={`${language === "ko" ? "저장된 마운트 포인트" : "Saved mount points"}: ${mountPoints.length}${language === "ko" ? "개" : " item(s)"}`}
           icon="📋"
           actions={
             <ActionPanel>
@@ -156,7 +156,7 @@ export default function Command() {
 
         <List.Item
           title={language === "ko" ? "활성 마운트 해제" : "Unmount active mounts"}
-          subtitle={`${language === "ko" ? "현재 마운트된 항목" : "Currently mounted items"}: ${activeMounts.length}개`}
+          subtitle={`${language === "ko" ? "현재 마운트된 항목" : "Currently mounted items"}: ${activeMounts.length}${language === "ko" ? "개" : " item(s)"}`}
           icon="⏏️"
           actions={
             <ActionPanel>

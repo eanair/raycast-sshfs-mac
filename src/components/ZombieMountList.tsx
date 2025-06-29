@@ -45,7 +45,7 @@ export function ZombieMountList({ onRefresh, language }: ZombieMountListProps) {
   const handleCleanupAll = async () => {
     const confirmed = await confirmAlert({
       title: language === "ko" ? "모든 좀비 마운트 정리" : "Clean all zombie mounts",
-      message: `${zombieMounts.length}개의 좀비 마운트를 모두 정리하시겠습니까?`,
+      message: `${language === "ko" ? `${zombieMounts.length}개의 좀비 마운트를 모두 정리하시겠습니까?` : `${zombieMounts.length} items of zombie mounts will be cleaned up. Are you sure you want to proceed?`}`,
       primaryAction: {
         title: language === "ko" ? "모두 정리" : "Clean all",
         style: Alert.ActionStyle.Destructive,
